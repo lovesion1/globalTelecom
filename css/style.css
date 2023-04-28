@@ -1,0 +1,378 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,body{
+  font-size: 12px;
+  font-style: 'Pretendard-Regular';
+}
+a{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+img{
+  vertical-align: bottom;
+}
+address{
+  font-style: normal;
+}
+button{
+  border: none;
+  background: transparent;
+}
+#wrap{
+  width: 100%;
+  min-width: 1500px;
+}
+.boxalign{
+  width: 1500px;
+  margin: auto;
+}
+header{
+  position: absolute;
+  /* maind의 배경을 함께 쓰기 위해 header를 띄워줌 */
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #555;
+  color: #fff;
+}
+header .boxalign{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #logo{
+  padding-bottom: 12px;
+  /* 메뉴와 같은 라인으로 보이게 하기 위해서 로고만 살짝 위로 올림 */
+}
+header nav{
+}
+header nav ul{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul li{
+  transition: .3s;
+}
+header nav ul li::after{
+  content: '';
+  display: block;
+  border-bottom: 5px solid orangered;
+  width: 0;
+  margin: auto;
+  transition: .3s;
+}
+header nav ul li:hover::after{
+  width: 100%;
+}
+header nav ul li:hover{
+  color: orangered;
+}
+header nav ul li a{
+  font-size: 2rem;
+  line-height: 85px;
+}
+header #rightnav{
+  width: 10%;
+}
+header #rightnav ul{
+  display: flex;
+  justify-content: space-between;
+}
+header #rightnav ul li:hover{
+  opacity: .8;
+}
+main{
+  background: url("../images/telecom_mainbg.jpg") center;
+  height: 1040px;
+  position: relative;
+}
+main .textcover{
+  position: absolute;
+  top: 200px;
+  left: 10%;
+  color: #fff;
+  border-left: 1px solid #999;
+  padding-left: 50px;
+}
+main .textcover h2{
+  font-size: 3rem;
+}
+main .textcover h2 b{
+  color: orangered;
+}
+main .textcover h4{
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+main .textcover p{
+  font-size: 1.25rem;
+  letter-spacing: -1px;
+  color: #999;
+}
+
+main .visualcover{}
+main .visualcover li{
+  width: 94px;
+  height: 94px;
+  font-size: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #ccc;
+  position: absolute;
+  transition: .5s;
+}
+main .visualcover .vlist01{
+  background: url("../images/telecom_mainicon01_01.png") orangered;
+  top: 550px;
+  left: 10%;
+}
+main .visualcover .vlist02{
+  background: url("../images/telecom_mainicon02_01.png") orangered;
+  top: 700px;
+  left: 25%;
+}
+main .visualcover .vlist03{
+  background: url("../images/telecom_mainicon03_01.png") orangered;
+  top: 600px;
+  left: 40%;
+}
+main .visualcover .vlist04{
+  background: url("../images/telecom_mainicon04_01.png") orangered;
+  top: 500px;
+  left: 55%;
+}
+main .visualcover .vlist05{
+  background: url("../images/telecom_mainicon05_01.png") orangered;
+  top: 250px;
+  right: 30%;
+}
+main .visualcover .vlist06{
+  background: url("../images/telecom_mainicon06_01.png") orangered;
+  top: 350px;
+  right: 10%;
+}
+main .visualcover li:hover{
+  transform: scale(4);
+}
+main .visualcover .vlist01:hover{
+  background: url("../images/telecom_mainicon01_02.png") orangered;
+  background-size: cover;
+}
+main .visualcover .vlist02:hover{
+  background: url("../images/telecom_mainicon02_02.png") orangered;
+  background-size: cover;
+}
+main .visualcover .vlist03:hover{
+  background: url("../images/telecom_mainicon03_02.png") orangered;
+  background-size: cover;
+}
+main .visualcover .vlist04:hover{
+  background: url("../images/telecom_mainicon04_02.png") orangered;
+  background-size: cover;
+}
+main .visualcover .vlist05:hover{
+  background: url("../images/telecom_mainicon05_02.png") orangered;
+  background-size: cover;
+}
+main .visualcover .vlist06:hover{
+  background: url("../images/telecom_mainicon06_02.png") orangered;
+  background-size: cover;
+}
+section{}
+#contents{}
+#contents .contitle{
+  text-align: center;
+  padding: 5rem 0;
+}
+#contents .contitle h3{
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+/* 공통 타이틀의 내용을 먼저 선언함 */
+#business .busilist{
+  display: flex;
+}
+#business .busilist li{
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+#business .busilist li::after{
+  content:'';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+}
+#business .busilist li:first-child::after{
+  display: none;
+}
+#business .busilist li:hover{
+  background: #eee;
+}
+#business .busilist li a span{
+  display: block;
+}
+#business .busilist .title{
+  font-size: 1.7rem;
+  margin-top: 3rem;
+}
+#business .busilist .text{
+  font-size: 1.2rem;
+  color: #666;
+  letter-spacing: -1px;
+}
+#history{}
+.historyCover{
+  background-image: linear-gradient(to right bottom, #555, orangered);
+  position: relative;
+}
+.historyCover .hisyear{
+  width: 1200px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.historyCover .hisyear li{
+  width: 200px;
+  position: relative;
+}
+.hisyear h3, .hisyear h2{
+  line-height: 70px;
+  font-size: 1.7rem;
+  text-shadow: 1px 1px 1px #000;
+}
+.historyCover .hisyear .underline{
+  width: 100%;
+  border-top: 9px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+}
+.historyCover .line{
+  display: block;
+  width: 100%;
+  border-top: 1px solid #aaa;
+  position: absolute;
+  top: 50%;
+}
+.historyCover .hisyear li >* {
+  transition: .3s;
+}
+.historyCover .hisyear li:hover h3{
+  font-size: 2.2em;
+}
+.historyCover .hisyear li:hover .underline{
+  opacity: 1;
+}
+.historyBody{
+  background: #eee;
+  padding: 8rem 0;
+}
+.historyBody .boxalign{
+  width: 1100px;
+  display: flex;
+}
+.historyBody .btextcover{
+  width: 586px;
+  margin-left: 150px;
+}
+.historyBody .btextcover h2{
+  font-size: 4rem;
+  font-weight: normal;
+}
+.historyBody .btextcover h4{
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+  font-weight: normal;
+}
+.historyBody .btextcover p{
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+.historyBody .btextcover a{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.historyBody .btextcover .bar{
+  width: 70px;
+  border-top: 3px solid orangered;
+  margin-right: 10px;
+}
+.historyBody .btextcover .view{
+  font-size: 1.5rem;
+}
+footer{}
+#ftop{
+  padding: 4rem 0;
+}
+#ftop .boxalign{
+  display: flex;
+}
+#ftop ul{
+  width: 1200px;
+}
+#ftop ul li{
+  width: 300px;
+}
+#ftop span{
+  display: block;
+  width: 20px;
+  border-top: 2px solid orangered;
+}
+#ftop h3{
+  font-size: 1.3rem;
+  margin: 15px 0 20px;
+}
+#ftop .addlist{
+  display: block;
+  font-size: 1.2rem;
+  color: #777;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+#ftop .addr{
+  background: url("../images/icon_placeholder.png") no-repeat 0 3px;
+}
+#ftop .tel{
+  background: url("../images/icon_telephone.png") no-repeat 0 3px;
+}
+#ftop .fax{
+  background: url("../images/icon_fax.png") no-repeat 0 3px;
+}
+#ftop .mail{
+  background: url("../images/icon_mail.png") no-repeat 0 3px;
+}
+#fbot{
+  text-align: center;
+  padding: 5rem;
+  box-shadow: 0 0 10px #ccc;
+}
+#flogo{}
+#fbot address{
+  margin-top: 20px;
+  color: #999;
+}
