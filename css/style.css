@@ -60,8 +60,6 @@ header nav{
 header nav ul{
   display: flex;
   gap: 50px;
-  align-items: center;
-  justify-content: space-around;
 }
 header nav ul li{
   transition: .3s;
@@ -71,7 +69,8 @@ header nav ul li::after{
   display: block;
   border-bottom: 5px solid orangered;
   width: 0;
-  margin: auto;
+  margin: auto; 
+  /* 중간에서 선이 나오게 하기 위함 */
   transition: .3s;
 }
 header nav ul li:hover::after{
@@ -316,11 +315,11 @@ section{}
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 10px;
 }
 .historyBody .btextcover .bar{
   width: 70px;
   border-top: 3px solid orangered;
-  margin-right: 10px;
 }
 .historyBody .btextcover .view{
   font-size: 1.5rem;
